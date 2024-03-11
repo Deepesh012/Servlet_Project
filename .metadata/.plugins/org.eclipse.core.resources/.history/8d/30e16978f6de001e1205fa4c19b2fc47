@@ -1,0 +1,58 @@
+package com.studentmanagsys.dob;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.List;
+
+import com.student_view.Student;
+
+public class StuDaoImplementation implements StudentDao {
+	Connection connection =ConnectionData.getconnection();
+	
+	@Override
+	public boolean saveStudent(Student student) {
+		try {
+			PreparedStatement ps = connection.prepareStatement("INSERT INTO student VALUES (?,?,?,?,?,?,?)");
+			ps.setInt(1, student.getRollno());
+			ps.setString(2, student.getName());
+			ps.setLong(3, student.getPhone());
+			ps.setString(4, student.getEmail());
+			ps.setInt(5, student.getAge());
+			ps.setString(6, student.getAddress());
+			ps.setString(7, student.getPassword());
+			
+			int execute = ps.executeUpdate();
+			return execute>0;
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return false;
+	}
+
+	@Override
+	public boolean updateStudent(Student student) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean deleteStudent(Student student) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public Student findStudentById(int rollno) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Student> findAllStudents() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

@@ -1,0 +1,5 @@
+package com.studentmanagsys.dob;
+
+public class StudentDao {
+
+}

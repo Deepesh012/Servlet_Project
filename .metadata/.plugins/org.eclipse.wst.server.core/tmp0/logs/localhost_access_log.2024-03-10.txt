@@ -1,0 +1,8 @@
+127.0.0.1 - - [10/Mar/2024:19:33:46 +0530] "GET / HTTP/1.1" 404 752
+0:0:0:0:0:0:0:1 - - [10/Mar/2024:19:33:49 +0530] "GET /Student_Management_System/ HTTP/1.1" 200 52
+127.0.0.1 - - [10/Mar/2024:21:39:03 +0530] "GET / HTTP/1.1" 404 752
+0:0:0:0:0:0:0:1 - - [10/Mar/2024:21:39:03 +0530] "GET /Student_Management_System/ HTTP/1.1" 200 52
+0:0:0:0:0:0:0:1 - - [10/Mar/2024:21:39:49 +0530] "GET /Student_Management_System/ HTTP/1.1" 200 52
+0:0:0:0:0:0:0:1 - - [10/Mar/2024:21:39:56 +0530] "GET /Student_Management_System/register HTTP/1.1" 404 790
+127.0.0.1 - - [10/Mar/2024:21:40:19 +0530] "GET / HTTP/1.1" 404 752
+0:0:0:0:0:0:0:1 - - [10/Mar/2024:21:40:20 +0530] "GET /Student_Management_System/servlet/com.studentmanagsys.dob.UserController HTTP/1.1" 404 832

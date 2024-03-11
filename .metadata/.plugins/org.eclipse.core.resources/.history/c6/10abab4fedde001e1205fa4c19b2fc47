@@ -1,0 +1,24 @@
+package com.studentmanagsys.dob;
+
+import java.sql.DriverManager;
+
+public class ConnectionData {
+	
+	private static ConnectionData connection;
+	
+	public static ConnectionData getconnection() {
+		String url = "jdbc:postgresql://localhost:5432/Student";
+		String user = "postgres";
+		String password = "root";
+		try {
+			Class.forName("org.postgresql.Driver");
+			connection = DriverManager.getConnection(url,user,password);
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return connection;
+	}
+
+}
